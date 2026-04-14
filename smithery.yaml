@@ -1,10 +1,5 @@
 name: mortgage-calculator-ai-mcp
-description: "MEOK AI Labs — Mortgage Calculator tools for AI agents and LLMs"
-vendor: MEOK AI Labs
-homepage: https://meok.ai
-repository: https://github.com/CSOAI-ORG/mortgage-calculator-ai-mcp
-license: MIT
-categories: [Finance, Real Estate]
-tags: [mortgage, home-loan, amortization, interest-rate, property-finance]
-runtime: python
-entrypoint: server.py
+description: Calculate mortgage payments, amortization schedules, and total interest
+  for home loans.
+version: 1.0.0
+tools: []
