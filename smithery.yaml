@@ -1,4 +1,7 @@
 name: mortgage-calculator-ai-mcp
 description: MEOK AI Labs MCP Server
 version: 1.0.0
-tools: []
+tools:
+- name: calculate_mortgage
+  description: Calculate mortgage payment
+  parameters: []
