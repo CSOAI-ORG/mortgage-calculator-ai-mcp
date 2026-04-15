@@ -1,0 +1,54 @@
+{
+  "name": "mortgage-calculator-ai",
+  "description": "Calculate mortgage payments, compare rates, generate amortization schedules, and check affordability.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/mortgage-calculator-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "calculate_mortgage",
+      "description": "Calculate monthly mortgage payment with optional down payment. Rate is annual percentage (e.g. 6.5)."
+    },
+    {
+      "name": "compare_rates",
+      "description": "Compare monthly payments across multiple interest rates side by side."
+    },
+    {
+      "name": "amortization_schedule",
+      "description": "Generate a yearly amortization schedule showing principal vs interest breakdown."
+    },
+    {
+      "name": "affordability_check",
+      "description": "Estimate maximum affordable home price based on income and debts using 28/36 rule."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Finance & Fintech",
+    "Productivity"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
