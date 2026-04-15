@@ -1,6 +1,6 @@
 {
   "name": "mortgage-calculator-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Calculate mortgage payments, compare rates, generate amortization schedules, and check affordability",
+  "description": "AI-powered mortgage calculator ai MCP server for agents. Supports calculate mortgage, compare rates, amortization schedule. By MEOK AI Labs.",
   "version": "1.0.0",
   "tools": [
     {

@@ -1,7 +1,7 @@
 {
   "name": "mortgage-calculator-ai-mcp",
   "version": "1.0.0",
-  "description": "MEOK AI Labs — mortgage calculator MCP Server",
+  "description": "AI-powered mortgage calculator ai MCP server for agents. Supports calculate mortgage, compare rates, amortization schedule. By MEOK AI Labs.",
   "main": "server.py",
   "mcp": {
     "name": "mortgage calculator",
@@ -9,10 +9,22 @@
     "homepage": "https://meok.ai",
     "repository": "https://github.com/CSOAI-ORG/mortgage-calculator-ai-mcp",
     "runtime": "python",
-    "tags": ["mcp", "mcp-server", "meok-ai-labs", "ai-tools"]
+    "tags": [
+      "mcp",
+      "mcp-server",
+      "meok-ai-labs",
+      "ai-tools"
+    ]
   },
-  "keywords": ["mcp", "mcp-server", "meok-ai-labs"],
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "meok-ai-labs"
+  ],
   "author": "MEOK AI Labs <nicholas@meok.ai>",
   "license": "MIT",
-  "repository": {"type": "git", "url": "https://github.com/CSOAI-ORG/mortgage-calculator-ai-mcp"}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CSOAI-ORG/mortgage-calculator-ai-mcp"
+  }
 }
