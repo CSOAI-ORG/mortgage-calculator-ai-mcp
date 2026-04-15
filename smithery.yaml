@@ -1,7 +1,71 @@
 name: mortgage-calculator-ai-mcp
-description: MEOK AI Labs MCP Server
+description: Calculate mortgage payments, compare rates, generate amortization schedules,
+  and check affordability
 version: 1.0.0
 tools:
 - name: calculate_mortgage
-  description: Calculate mortgage payment
-  parameters: []
+  description: Calculate monthly mortgage payment with optional down payment. Rate
+    is annual percentage (e.g. 6.5).
+  parameters:
+  - name: principal
+    type: number
+    required: true
+  - name: rate
+    type: number
+    required: true
+  - name: years
+    type: integer
+    required: true
+  - name: down_payment
+    type: number
+    required: false
+- name: compare_rates
+  description: Compare monthly payments across multiple interest rates side by side.
+  parameters:
+  - name: principal
+    type: number
+    required: true
+  - name: years
+    type: integer
+    required: true
+  - name: rates
+    type: number
+    required: true
+  - name: down_payment
+    type: number
+    required: false
+- name: amortization_schedule
+  description: Generate a yearly amortization schedule showing principal vs interest
+    breakdown.
+  parameters:
+  - name: principal
+    type: number
+    required: true
+  - name: rate
+    type: number
+    required: true
+  - name: years
+    type: integer
+    required: true
+  - name: down_payment
+    type: number
+    required: false
+- name: affordability_check
+  description: Estimate maximum affordable home price based on income and debts using
+    28/36 rule.
+  parameters:
+  - name: annual_income
+    type: number
+    required: true
+  - name: monthly_debts
+    type: number
+    required: false
+  - name: rate
+    type: number
+    required: false
+  - name: years
+    type: integer
+    required: false
+  - name: down_payment
+    type: number
+    required: false

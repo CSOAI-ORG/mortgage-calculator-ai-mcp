@@ -1,15 +1,111 @@
 {
   "name": "mortgage-calculator-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs MCP Server",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Calculate mortgage payments, compare rates, generate amortization schedules, and check affordability",
   "version": "1.0.0",
   "tools": [
     {
       "name": "calculate_mortgage",
-      "description": "Calculate mortgage payment",
+      "description": "Calculate monthly mortgage payment with optional down payment. Rate is annual percentage (e.g. 6.5).",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "principal": {
+            "type": "number"
+          },
+          "rate": {
+            "type": "number"
+          },
+          "years": {
+            "type": "integer"
+          },
+          "down_payment": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "principal",
+          "rate",
+          "years"
+        ]
+      }
+    },
+    {
+      "name": "compare_rates",
+      "description": "Compare monthly payments across multiple interest rates side by side.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "principal": {
+            "type": "number"
+          },
+          "years": {
+            "type": "integer"
+          },
+          "rates": {
+            "type": "number"
+          },
+          "down_payment": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "principal",
+          "years",
+          "rates"
+        ]
+      }
+    },
+    {
+      "name": "amortization_schedule",
+      "description": "Generate a yearly amortization schedule showing principal vs interest breakdown.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "principal": {
+            "type": "number"
+          },
+          "rate": {
+            "type": "number"
+          },
+          "years": {
+            "type": "integer"
+          },
+          "down_payment": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "principal",
+          "rate",
+          "years"
+        ]
+      }
+    },
+    {
+      "name": "affordability_check",
+      "description": "Estimate maximum affordable home price based on income and debts using 28/36 rule.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "annual_income": {
+            "type": "number"
+          },
+          "monthly_debts": {
+            "type": "number"
+          },
+          "rate": {
+            "type": "number"
+          },
+          "years": {
+            "type": "integer"
+          },
+          "down_payment": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "annual_income"
+        ]
       }
     }
   ]
