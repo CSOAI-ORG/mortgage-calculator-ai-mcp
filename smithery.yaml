@@ -1,5 +1,4 @@
 name: mortgage-calculator-ai-mcp
-description: Calculate mortgage payments, amortization schedules, and total interest
-  for home loans.
+description: MEOK AI Labs MCP Server
 version: 1.0.0
 tools: []

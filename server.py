@@ -17,26 +17,42 @@ import mcp.types as types
 import sys, os
 sys.path.insert(0, os.path.expanduser("~/clawd/meok-labs-engine/shared"))
 from auth_middleware import check_access
-import json
+
+from datetime import datetime, timezone
+from collections import defaultdict
+
+FREE_DAILY_LIMIT = 15
+_usage = defaultdict(list)
+def _rl(c="anon"):
+    now = datetime.now(timezone.utc)
+    _usage[c] = [t for t in _usage[c] if (now-t).total_seconds() < 86400]
+    if len(_usage[c]) >= FREE_DAILY_LIMIT: return json.dumps({"error": f"Limit {FREE_DAILY_LIMIT}/day"})
+    _usage[c].append(now); return None
 
 # In-memory store (replace with DB in production)
 _store = {}
 
-server = Server("mortgage-calculator-ai-mcp")
+server = Server("mortgage-calculator-ai")
 
 @server.list_resources()
-async def handle_list_resources() -> list[Resource]:
+def handle_list_resources() -> list[Resource]:
     return []
 
 @server.list_tools()
-async def handle_list_tools() -> list[Tool]:
+def handle_list_tools() -> list[Tool]:
     return [
         Tool(name="calculate_mortgage", description="Calculate mortgage payment", inputSchema={"type":"object","properties":{"principal":{"type":"number"},"rate":{"type":"number"},"years":{"type":"number"}},"required":["principal","rate","years"]}),
     ]
 
 @server.call_tool()
-async def handle_call_tool(name: str, arguments: Any | None) -> list[types.TextContent | types.ImageContent | types.EmbeddedResource]:
+def handle_call_tool(name: str, arguments: Any | None) -> list[types.TextContent | types.ImageContent | types.EmbeddedResource]:
     args = arguments or {}
+    api_key = args.get("api_key", "")
+    allowed, msg, tier = check_access(api_key)
+    if not allowed:
+        return [TextContent(type="text", text=json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"}))]
+    if err := _rl():
+        return [TextContent(type="text", text=err)]
     if name == "calculate_mortgage":
             p = args["principal"]; r = args["rate"] / 1200; n = args["years"] * 12
             payment = p * (r * (1+r)**n) / ((1+r)**n - 1) if r > 0 else p / n
