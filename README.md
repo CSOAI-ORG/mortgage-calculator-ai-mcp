@@ -1,62 +1,38 @@
-# Mortgage Calculator AI
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Calculate mortgage payments, compare rates, generate amortization schedules, and check affordability
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/mortgage-calculator-ai-mcp)](https://github.com/CSOAI-ORG/mortgage-calculator-ai-mcp/stargazers)
+
+# umortgageU calculatorU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/mortgage-calculator-ai-mcp)](https://www.npmjs.com/package/@meok-ai/mortgage-calculator-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/mortgage-calculator-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install mortgage-calculator-ai-mcp
+# or
+npm install -g @meok-ai/mortgage-calculator-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-python server.py
-```
+See the project repository for full documentation and examples.
 
-## Tools
+## Enterprise Support
 
-### `calculate_mortgage`
-Calculate monthly mortgage payment with optional down payment.
-
-**Parameters:**
-- `principal` (float): Home price
-- `rate` (float): Annual interest rate percentage (e.g. 6.5)
-- `years` (int): Loan term in years
-- `down_payment` (float): Down payment amount (default: 0)
-
-### `compare_rates`
-Compare monthly payments across multiple interest rates side by side.
-
-**Parameters:**
-- `principal` (float): Home price
-- `years` (int): Loan term
-- `rates` (list[float]): Interest rates to compare
-- `down_payment` (float): Down payment (default: 0)
-
-### `amortization_schedule`
-Generate a yearly amortization schedule showing principal vs interest breakdown and equity growth.
-
-**Parameters:**
-- `principal` (float): Home price
-- `rate` (float): Annual rate
-- `years` (int): Loan term
-- `down_payment` (float): Down payment (default: 0)
-
-### `affordability_check`
-Estimate maximum affordable home price based on income and debts using the 28/36 DTI rule.
-
-**Parameters:**
-- `annual_income` (float): Annual gross income
-- `monthly_debts` (float): Existing monthly debt payments (default: 0)
-- `rate` (float): Assumed interest rate (default: 6.5)
-- `years` (int): Loan term (default: 30)
-- `down_payment` (float): Available down payment (default: 0)
-
-## Authentication
-
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
