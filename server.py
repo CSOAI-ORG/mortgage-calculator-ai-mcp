@@ -48,6 +48,14 @@ def calculate_mortgage(principal: float, rate: float, years: int, down_payment: 
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        principal (float): The principal to analyze or process.
+        rate (float): The rate to analyze or process.
+        years (int): The years to analyze or process.
+        down_payment (float): The down payment to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -109,6 +117,14 @@ def compare_rates(principal: float, years: int, rates: list[float], down_payment
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        principal (float): The principal to analyze or process.
+        years (int): The years to analyze or process.
+        rates (list[float]): The rates to analyze or process.
+        down_payment (float): The down payment to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -179,6 +195,14 @@ def amortization_schedule(principal: float, rate: float, years: int, down_paymen
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        principal (float): The principal to analyze or process.
+        rate (float): The rate to analyze or process.
+        years (int): The years to analyze or process.
+        down_payment (float): The down payment to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
@@ -256,6 +280,15 @@ def affordability_check(annual_income: float, monthly_debts: float = 0, rate: fl
     When NOT to use:
         Not suitable for real-time production decision-making without
         human review of results.
+
+    Args:
+        annual_income (float): The annual income to analyze or process.
+        monthly_debts (float): The monthly debts to analyze or process.
+        rate (float): The rate to analyze or process.
+        years (int): The years to analyze or process.
+        down_payment (float): The down payment to analyze or process.
+        api_key (str): The api key to analyze or process.
+
     Behavioral Transparency:
         - Side Effects: This tool is read-only and produces no side effects. It does not modify
           any external state, databases, or files. All output is computed in-memory and returned
