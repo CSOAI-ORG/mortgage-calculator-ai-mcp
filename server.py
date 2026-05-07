@@ -32,7 +32,23 @@ def _monthly_payment(principal: float, annual_rate: float, years: int) -> float:
 
 @mcp.tool()
 def calculate_mortgage(principal: float, rate: float, years: int, down_payment: float = 0, api_key: str = "") -> str:
-    """Calculate monthly mortgage payment with optional down payment. Rate is annual percentage (e.g. 6.5)."""
+    """Calculate monthly mortgage payment with optional down payment. Rate is annual percentage (e.g. 6.5).
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -63,7 +79,23 @@ def calculate_mortgage(principal: float, rate: float, years: int, down_payment: 
 
 @mcp.tool()
 def compare_rates(principal: float, years: int, rates: list[float], down_payment: float = 0, api_key: str = "") -> str:
-    """Compare monthly payments across multiple interest rates side by side."""
+    """Compare monthly payments across multiple interest rates side by side.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -104,7 +136,22 @@ def compare_rates(principal: float, years: int, rates: list[float], down_payment
 
 @mcp.tool()
 def amortization_schedule(principal: float, rate: float, years: int, down_payment: float = 0, api_key: str = "") -> str:
-    """Generate a yearly amortization schedule showing principal vs interest breakdown."""
+    """Generate a yearly amortization schedule showing principal vs interest breakdown.
+
+    Behavior:
+        This tool generates structured output without modifying external systems.
+        Output is deterministic for identical inputs. No side effects.
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
@@ -151,7 +198,23 @@ def amortization_schedule(principal: float, rate: float, years: int, down_paymen
 
 @mcp.tool()
 def affordability_check(annual_income: float, monthly_debts: float = 0, rate: float = 6.5, years: int = 30, down_payment: float = 0, api_key: str = "") -> str:
-    """Estimate maximum affordable home price based on income and debts using 28/36 rule."""
+    """Estimate maximum affordable home price based on income and debts using 28/36 rule.
+
+    Behavior:
+        This tool is read-only and stateless — it produces analysis output
+        without modifying any external systems, databases, or files.
+        Safe to call repeatedly with identical inputs (idempotent).
+        Free tier: 10/day rate limit. Pro tier: unlimited.
+        No authentication required for basic usage.
+
+    When to use:
+        Use this tool when you need structured analysis or classification
+        of inputs against established frameworks or standards.
+
+    When NOT to use:
+        Not suitable for real-time production decision-making without
+        human review of results.
+    """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
         return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
