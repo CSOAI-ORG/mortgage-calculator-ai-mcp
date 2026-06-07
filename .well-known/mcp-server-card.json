@@ -1,0 +1,25 @@
+{
+  "name": "mortgage-calculator-ai-mcp",
+  "title": "Mortgage Calculator Ai Mcp",
+  "description": "AI-powered mortgage calculator ai MCP server for agents. Supports calculate mortgage, compare rates, amortization schedule. By MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "calculate_mortgage"
+    },
+    {
+      "name": "compare_rates"
+    },
+    {
+      "name": "amortization_schedule"
+    },
+    {
+      "name": "affordability_check"
+    }
+  ]
+}

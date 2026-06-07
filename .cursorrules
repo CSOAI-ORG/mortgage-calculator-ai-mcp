@@ -1,0 +1,9 @@
+# mortgage-calculator-ai-mcp - Auto-trigger Rules
+
+When the user asks about mortgage calculator, use mortgage-calculator-ai-mcp tools: calculate_mortgage, compare_rates, amortization_schedule, affordability_check
+
+**MCP server for mortgage calculator ai mcp operations**
+
+Install: `pip install mortgage-calculator-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

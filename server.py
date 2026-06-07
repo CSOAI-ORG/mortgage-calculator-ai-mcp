@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""MEOK AI Labs — mortgage-calculator-ai-mcp MCP Server. Calculate mortgage payments, amortization, and affordability."""
+"""
+MEOK AI Labs — mortgage-calculator-ai-mcp MCP Server. Calculate mortgage payments, amortization, and affordability."""
 
 import json
 from datetime import datetime, timezone
@@ -7,7 +8,6 @@ from collections import defaultdict
 
 from mcp.server.fastmcp import FastMCP
 import sys, os
-sys.path.insert(0, os.path.expanduser("~/clawd/meok-labs-engine/shared"))
 from auth_middleware import check_access
 
 FREE_DAILY_LIMIT = 15
@@ -73,7 +73,7 @@ def calculate_mortgage(principal: float, rate: float, years: int, down_payment: 
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     loan_amount = principal - down_payment
@@ -142,7 +142,7 @@ def compare_rates(principal: float, years: int, rates: list[float], down_payment
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     loan_amount = principal - down_payment
@@ -220,7 +220,7 @@ def amortization_schedule(principal: float, rate: float, years: int, down_paymen
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     loan = principal - down_payment
@@ -306,7 +306,7 @@ def affordability_check(annual_income: float, monthly_debts: float = 0, rate: fl
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     monthly_income = annual_income / 12
@@ -349,5 +349,8 @@ def affordability_check(annual_income: float, monthly_debts: float = 0, rate: fl
     }, indent=2)
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,33 @@
+# mortgage-calculator-ai-mcp
+# **MCP server for mortgage calculator ai mcp operations**
+
+## Install
+```bash
+pip install mortgage-calculator-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `calculate_mortgage`
+Calculate monthly mortgage payment with optional down payment. Rate is annual percentage (e.g. 6.5).
+
+### `compare_rates`
+Compare monthly payments across multiple interest rates side by side.
+
+### `amortization_schedule`
+Generate a yearly amortization schedule showing principal vs interest breakdown.
+
+### `affordability_check`
+Estimate maximum affordable home price based on income and debts using 28/36 rule.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.
