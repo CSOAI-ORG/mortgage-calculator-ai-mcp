@@ -1,0 +1,59 @@
+{
+  "name": "mortgage-calculator-ai-mcp",
+  "description": "Mortgage Calculator Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/mortgage-calculator-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "calculate_mortgage",
+      "name": "Calculate Mortgage",
+      "description": "calculate_mortgage via mortgage-calculator-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "compare_rates",
+      "name": "Compare Rates",
+      "description": "compare_rates via mortgage-calculator-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "amortization_schedule",
+      "name": "Amortization Schedule",
+      "description": "amortization_schedule via mortgage-calculator-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "affordability_check",
+      "name": "Affordability Check",
+      "description": "affordability_check via mortgage-calculator-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

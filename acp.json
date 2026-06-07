@@ -1,0 +1,22 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "mortgage-calculator-ai-mcp",
+    "description": "Mortgage Calculator Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "mortgage-calculator-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "calculate_mortgage",
+      "compare_rates",
+      "amortization_schedule",
+      "affordability_check"
+    ]
+  }
+}
